@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create_table_stock" author="admin">
+
+       <createTable tableName="stock">
+           <column autoIncrement="true" name="id" type="integer" ><constraints primaryKey="true" nullable="false"/></column>
+           <column name="name" type="varchar(100)"><constraints nullable="false"/> </column>
+       </createTable>
+        <addForeignKeyConstraint baseTableName="stockstate" baseColumnNames="stock_id" constraintName="stock_name" referencedTableName="stock"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-into-stock" author="admin">
+        <insert tableName="stock">
+            <column name="name" value="GazProm"></column>
+        </insert>
+        <insert tableName="stock">
+            <column name="name" value="LukOil"></column>
+        </insert>
+        <insert tableName="stock">
+            <column name="name" value="RosNeft"></column>
+        </insert>
+        <insert tableName="stock">
+            <column name="name" value="Olvi"></column>
+        </insert>
+
+
+    </changeSet>
+</databaseChangeLog>
