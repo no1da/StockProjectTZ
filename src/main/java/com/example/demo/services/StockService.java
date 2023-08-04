@@ -47,40 +47,8 @@ public class StockService {
 
 
     public void delete(int id) {
-        /*dao.delete(id);*/
-
-        List<StockStateDTO> dtoList = new ArrayList<>();
-        StockStateDTO stockStateDTO1 = new StockStateDTO();
-        stockStateDTO1.setId(1);
-        stockStateDTO1.setName("IIFGGF");
-        stockStateDTO1.setPrice(2000);
-        StockStateDTO stockStateDTO2 = new StockStateDTO();
-        stockStateDTO2.setId(2);
-        stockStateDTO2.setName("HUH");
-        stockStateDTO2.setPrice(2030);
-
-        dtoList.add(stockStateDTO1);
-        dtoList.add(stockStateDTO2);
-
-        System.out.println(dtoList);
-
-
-        List<String> localDates = dtoList.stream().map(StockStateDTO::getName).collect(Collectors.toList());
-        System.out.println(localDates);
-
-        String string = new String("ТАНЯ");
-        String string1 = new String("ТАНЯ");
-        String string2 = new String("ТАНЯ");
-        String string3 = new String("ТАНЯ");
-        String string4 = new String("ТАНЯ");
-
-        String s = "kdfldkfcfgjdfgjfgg";
-        String s1 = "kdfldkfg";
-
-
-
-
-    }
+        dao.delete(id);
+}
 
 
     public void update(StockStateDTO stockStateDTO, int id) {
